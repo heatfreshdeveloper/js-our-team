@@ -19,6 +19,36 @@ let teamDatabase = [
         nome: "Wayne Barnett",
         ruolo: "Founder & CEO",
         foto: "img/wayne-barnett-founder-ceo.jpg"
+    },
+
+    {
+      nome: "Angela Caroll",
+      ruolo: "Chief Editor",
+      foto: "img/angela-caroll-chief-editor.jpg"
+    },
+
+    {
+      nome: "Walter Gordon",
+      ruolo: "Office Manager",
+      foto: "img/walter-gordon-office-manager.jpg"
+    },
+
+    {
+      nome: "Angela Lopez",
+      ruolo: "Social Media Manager",
+      foto: "img/angela-lopez-social-media-manager.jpg"
+    },
+
+    {
+      nome: "Scott Estrada",
+      ruolo: "Developer",
+      foto: "img/scott-estrada-developer.jpg"
+    },
+
+    {
+      nome: "Barbara Ramos",
+      ruolo: "Graphic Designer",
+      foto: "img/barbara-ramos-graphic-designer.jpg"
     }
 ]
 
@@ -47,16 +77,17 @@ function createNewCard() {
 
 }
 
-const nameMember = document.getElementById("name").value;
-const role = document.getElementById("role").value;
-const image = document.getElementById("image").value;
 
 addMember.addEventListener("click", function () {
+  const nameMember = document.getElementById("name");
+  const role = document.getElementById("role");
+  const image = document.getElementById("image");
+
     teamDatabase.push(
     {
-      nome: nameMember,
-      ruolo: role,
-      foto: image
+      nome: nameMember.value,
+      ruolo: role.value,
+      foto: image.value
     })
 
     createNewCard()
